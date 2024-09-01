@@ -10,9 +10,8 @@ export default function Cart({ onUpdateItemQuantity }) {
   );
   const formattedTotalPrice = `$${totalPrice.toFixed(2)}`;
 
-
+  
   return (
-
     <div id="cart">
       {items.length === 0 && <p>No items in cart!</p>}
       {items.length > 0 && (
