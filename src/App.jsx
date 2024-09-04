@@ -8,8 +8,7 @@ import { CartContext } from './store/shopping-cart-context.jsx'
 
 function App() {
   const [shoppingCart, setShoppingCart] = useState({
-    items: [],
-
+    items: []
   });
 
   function handleAddItemToCart(id) {
@@ -76,10 +75,7 @@ function App() {
 
   return (
     <CartContext.Provider value={ctxValue}>
-      <Header
-        cart={shoppingCart}
-        onUpdateCartItemQuantity={handleUpdateCartItemQuantity}
-      />
+      <Header />
       <Shop onAddItemToCart={handleAddItemToCart}>
         {DUMMY_PRODUCTS.map((product) => (
           <li key={product.id}>
